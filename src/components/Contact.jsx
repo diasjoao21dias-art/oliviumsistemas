@@ -11,15 +11,91 @@ function Contact() {
     message: ''
   })
 
+  const [errors, setErrors] = useState({})
+  const [touched, setTouched] = useState({})
   const [submitted, setSubmitted] = useState(false)
   const [sending, setSending] = useState(false)
   const [sendMethod, setSendMethod] = useState('email')
 
+  const validateField = (name, value) => {
+    switch (name) {
+      case 'name':
+        if (!value.trim()) return 'Nome é obrigatório'
+        if (value.trim().length < 3) return 'Nome deve ter pelo menos 3 caracteres'
+        return ''
+      
+      case 'email':
+        if (!value.trim()) return 'Email é obrigatório'
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+        if (!emailRegex.test(value)) return 'Email inválido'
+        return ''
+      
+      case 'phone':
+        if (!value.trim()) return 'Telefone é obrigatório'
+        const phoneRegex = /^[\d\s()-]+$/
+        if (!phoneRegex.test(value)) return 'Telefone inválido'
+        if (value.replace(/\D/g, '').length < 10) return 'Telefone deve ter pelo menos 10 dígitos'
+        return ''
+      
+      case 'service':
+        if (!value) return 'Selecione um serviço'
+        return ''
+      
+      case 'message':
+        if (!value.trim()) return 'Mensagem é obrigatória'
+        if (value.trim().length < 10) return 'Mensagem deve ter pelo menos 10 caracteres'
+        return ''
+      
+      default:
+        return ''
+    }
+  }
+
   const handleChange = (e) => {
+    const { name, value } = e.target
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [name]: value
     })
+    
+    if (touched[name]) {
+      const error = validateField(name, value)
+      setErrors({
+        ...errors,
+        [name]: error
+      })
+    }
+  }
+
+  const handleBlur = (e) => {
+    const { name, value } = e.target
+    setTouched({
+      ...touched,
+      [name]: true
+    })
+    
+    const error = validateField(name, value)
+    setErrors({
+      ...errors,
+      [name]: error
+    })
+  }
+
+  const validateForm = () => {
+    const newErrors = {}
+    Object.keys(formData).forEach(key => {
+      const error = validateField(key, formData[key])
+      if (error) newErrors[key] = error
+    })
+    setErrors(newErrors)
+    setTouched({
+      name: true,
+      email: true,
+      phone: true,
+      service: true,
+      message: true
+    })
+    return Object.keys(newErrors).length === 0
   }
 
   const sendEmail = async () => {
@@ -86,6 +162,10 @@ ${formData.message}
   const handleSubmit = async (e) => {
     e.preventDefault()
     
+    if (!validateForm()) {
+      return
+    }
+    
     if (sendMethod === 'email') {
       const success = await sendEmail()
       if (success) {
@@ -99,6 +179,8 @@ ${formData.message}
             service: '',
             message: ''
           })
+          setErrors({})
+          setTouched({})
         }, 5000)
       }
     } else {
@@ -113,6 +195,8 @@ ${formData.message}
           service: '',
           message: ''
         })
+        setErrors({})
+        setTouched({})
       }, 3000)
     }
   }
@@ -205,9 +289,13 @@ ${formData.message}
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                required
+                onBlur={handleBlur}
+                className={errors.name && touched.name ? 'error' : ''}
                 placeholder="Seu nome"
               />
+              {errors.name && touched.name && (
+                <span className="error-message">{errors.name}</span>
+              )}
             </div>
 
             <div className="form-row">
@@ -219,9 +307,13 @@ ${formData.message}
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  required
+                  onBlur={handleBlur}
+                  className={errors.email && touched.email ? 'error' : ''}
                   placeholder="seu@email.com"
                 />
+                {errors.email && touched.email && (
+                  <span className="error-message">{errors.email}</span>
+                )}
               </div>
 
               <div className="form-group">
@@ -232,9 +324,13 @@ ${formData.message}
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
-                  required
+                  onBlur={handleBlur}
+                  className={errors.phone && touched.phone ? 'error' : ''}
                   placeholder="(11) 98765-4321"
                 />
+                {errors.phone && touched.phone && (
+                  <span className="error-message">{errors.phone}</span>
+                )}
               </div>
             </div>
 
@@ -245,7 +341,8 @@ ${formData.message}
                 name="service"
                 value={formData.service}
                 onChange={handleChange}
-                required
+                onBlur={handleBlur}
+                className={errors.service && touched.service ? 'error' : ''}
               >
                 <option value="">Selecione um serviço</option>
                 <option value="sistema">Desenvolvimento de Sistema</option>
@@ -256,6 +353,9 @@ ${formData.message}
                 <option value="cloud">Soluções em Nuvem</option>
                 <option value="outro">Outro</option>
               </select>
+              {errors.service && touched.service && (
+                <span className="error-message">{errors.service}</span>
+              )}
             </div>
 
             <div className="form-group">
@@ -265,10 +365,14 @@ ${formData.message}
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
-                required
+                onBlur={handleBlur}
+                className={errors.message && touched.message ? 'error' : ''}
                 rows="5"
                 placeholder="Conte-nos sobre seu projeto..."
               ></textarea>
+              {errors.message && touched.message && (
+                <span className="error-message">{errors.message}</span>
+              )}
             </div>
 
             <button type="submit" className="btn btn-primary btn-submit btn-modern" disabled={sending}>

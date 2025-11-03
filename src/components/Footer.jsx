@@ -11,7 +11,7 @@ function Footer() {
         <div className="footer-content">
           <div className="footer-section">
             <div className="footer-logo">
-              <img src="/logo.png" alt="Olivium Sistemas" className="logo-image" />
+              <img src="/logo.png" alt="Olivium Sistemas" className="logo-image" loading="lazy" decoding="async" />
             </div>
             <p className="footer-description">
               Transformando ideias em soluções digitais de alto impacto. 
