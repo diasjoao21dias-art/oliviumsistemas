@@ -120,7 +120,7 @@ function Services() {
   return (
     <section className="services section" id="services">
       <div className="container">
-        <div className="section-header">
+        <div className="section-header animate-on-scroll animate-fadeInUp">
           <h2 className="section-title">Nossos Serviços</h2>
           <p className="section-subtitle">
             Oferecemos soluções tecnológicas completas para transformar e impulsionar seu negócio
@@ -130,7 +130,7 @@ function Services() {
         <div className="services-grid">
           {services.map((service, index) => (
             <div 
-              className="service-card card card-3d-effect clickable-card" 
+              className={`service-card card card-3d-effect clickable-card animate-on-scroll animate-scaleIn delay-${(index % 3 + 1) * 100}`}
               key={index}
               onClick={() => handleServiceClick(service.whatsappMsg)}
             >

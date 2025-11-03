@@ -600,8 +600,3 @@ body::after {
 img {
   content-visibility: auto;
 }
-
-.animate-on-scroll {
-  content-visibility: auto;
-  contain-intrinsic-size: 500px;
-}

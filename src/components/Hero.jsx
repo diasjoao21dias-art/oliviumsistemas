@@ -57,24 +57,24 @@ function Hero() {
       <div className="container">
         <div className="hero-content">
           <div className="hero-text">
-            <div className="hero-badge">
+            <div className="hero-badge animate-on-scroll animate-fadeIn">
               <span className="badge-icon">⚡</span>
               <span className="badge-text">Soluções Digitais de Alta Performance</span>
             </div>
             
-            <h1 className="hero-title">
+            <h1 className="hero-title animate-on-scroll animate-fadeInUp delay-100">
               Transformamos suas{' '}
               <span className="highlight">ideias</span>
               {' '}em{' '}
               <span className="highlight">realidade digital</span>
             </h1>
             
-            <p className="hero-description">
+            <p className="hero-description animate-on-scroll animate-fadeInUp delay-200">
               Desenvolvemos sistemas personalizados, sites corporativos e aplicativos web 
               com design moderno e tecnologia de ponta para impulsionar seu negócio.
             </p>
             
-            <div className="hero-buttons">
+            <div className="hero-buttons animate-on-scroll animate-fadeInUp delay-300">
               <button className="btn btn-primary btn-large btn-magnetic" onClick={scrollToContact}>
                 <span>Iniciar Projeto</span>
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -86,7 +86,7 @@ function Hero() {
               </button>
             </div>
             
-            <div className="hero-stats">
+            <div className="hero-stats animate-on-scroll animate-fadeInUp delay-400">
               <div className="stat-item">
                 <div className="stat-number">
                   <AnimatedCounter end={500} suffix="+" duration={2500} />
@@ -111,14 +111,14 @@ function Hero() {
           </div>
           
           <div className="hero-visual">
-            <div className="visual-card card-1">
+            <div className="visual-card card-1 animate-on-scroll animate-fadeInRight delay-100">
               <div className="card-icon">💻</div>
               <div className="card-content">
                 <div className="card-title">Desenvolvimento Web</div>
                 <div className="card-bar"></div>
               </div>
             </div>
-            <div className="visual-card card-2">
+            <div className="visual-card card-2 animate-on-scroll animate-fadeInRight delay-200">
               <div className="card-icon">🚀</div>
               <div className="card-content">
                 <div className="card-title">Deploy em Produção</div>
@@ -128,7 +128,7 @@ function Hero() {
                 </div>
               </div>
             </div>
-            <div className="visual-card card-3">
+            <div className="visual-card card-3 animate-on-scroll animate-fadeInRight delay-300">
               <div className="card-icon">📊</div>
               <div className="card-content">
                 <div className="card-title">Performance</div>
