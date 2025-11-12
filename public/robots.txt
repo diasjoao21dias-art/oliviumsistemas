@@ -1,0 +1,13 @@
+# robots.txt para oliviumsistemas.com.br
+# Permite que todos os mecanismos de busca indexem o site
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /wp-admin/
+
+# Sitemap
+Sitemap: https://oliviumsistemas.com.br/sitemap.xml
+
+# Crawl-delay para ser gentil com os servidores
+Crawl-delay: 1
