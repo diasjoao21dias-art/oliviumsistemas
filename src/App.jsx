@@ -4,6 +4,7 @@ import './App.css'
 import Layout from './components/Layout'
 import HomePage from './pages/HomePage'
 import ScrollToTopOnMount from './components/ScrollToTopOnMount'
+import ScrollAnimations from './components/ScrollAnimations'
 
 const TermosDeUso = lazy(() => import('./pages/TermosDeUso'))
 const PoliticaPrivacidade = lazy(() => import('./pages/PoliticaPrivacidade'))
@@ -12,6 +13,7 @@ function App() {
   return (
     <Router>
       <ScrollToTopOnMount />
+      <ScrollAnimations />
       <Suspense fallback={<div className="loading-spinner">Carregando...</div>}>
         <Routes>
           <Route path="/" element={<Layout />}>
