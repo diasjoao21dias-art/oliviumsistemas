@@ -111,14 +111,14 @@ function Hero() {
           </div>
           
           <div className="hero-visual">
-            <div className="visual-card card-1 animate-on-scroll animate-fadeInRight delay-100">
+            <div className="visual-card card-1">
               <div className="card-icon">💻</div>
               <div className="card-content">
                 <div className="card-title">Desenvolvimento Web</div>
                 <div className="card-bar"></div>
               </div>
             </div>
-            <div className="visual-card card-2 animate-on-scroll animate-fadeInRight delay-200">
+            <div className="visual-card card-2">
               <div className="card-icon">🚀</div>
               <div className="card-content">
                 <div className="card-title">Deploy em Produção</div>
@@ -128,7 +128,7 @@ function Hero() {
                 </div>
               </div>
             </div>
-            <div className="visual-card card-3 animate-on-scroll animate-fadeInRight delay-300">
+            <div className="visual-card card-3">
               <div className="card-icon">📊</div>
               <div className="card-content">
                 <div className="card-title">Performance</div>

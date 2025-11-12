@@ -16,16 +16,28 @@ function ScrollAnimations() {
           entry.target.style.opacity = '1'
           
           if (!prefersReducedMotion) {
+            const computedStyle = window.getComputedStyle(entry.target)
+            const existingAnimation = computedStyle.animation
+            
+            let newAnimation = ''
             if (entry.target.classList.contains('animate-fadeInUp')) {
-              entry.target.style.animation = `fadeInUp 0.6s ease-out forwards`
+              newAnimation = `fadeInUp 0.6s ease-out forwards`
             } else if (entry.target.classList.contains('animate-fadeInLeft')) {
-              entry.target.style.animation = `fadeInLeft 0.6s ease-out forwards`
+              newAnimation = `fadeInLeft 0.6s ease-out forwards`
             } else if (entry.target.classList.contains('animate-fadeInRight')) {
-              entry.target.style.animation = `fadeInRight 0.6s ease-out forwards`
+              newAnimation = `fadeInRight 0.6s ease-out forwards`
             } else if (entry.target.classList.contains('animate-fadeIn')) {
-              entry.target.style.animation = `fadeIn 0.6s ease-out forwards`
+              newAnimation = `fadeIn 0.6s ease-out forwards`
             } else if (entry.target.classList.contains('animate-scaleIn')) {
-              entry.target.style.animation = `scaleIn 0.6s ease-out forwards`
+              newAnimation = `scaleIn 0.6s ease-out forwards`
+            }
+            
+            if (newAnimation) {
+              if (existingAnimation && existingAnimation !== 'none' && !existingAnimation.includes('fadeIn') && !existingAnimation.includes('scaleIn')) {
+                entry.target.style.animation = `${existingAnimation}, ${newAnimation}`
+              } else {
+                entry.target.style.animation = newAnimation
+              }
             }
           }
           
