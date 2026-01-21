@@ -88,7 +88,7 @@ function FAQ() {
         <div className="faq-cta">
           <p>Não encontrou a resposta que procura?</p>
           <a 
-            href="https://wa.me/5534998408523?text=Olá!%20Tenho%20algumas%20dúvidas%20sobre%20os%20serviços."
+            href="https://wa.me/5534998250458?text=Olá!%20Tenho%20algumas%20dúvidas%20sobre%20os%20serviços."
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-primary"

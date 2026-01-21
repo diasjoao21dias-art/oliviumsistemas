@@ -132,7 +132,7 @@ function Header() {
                 <li><a href="#calculator" className={`nav-link ${activeSection === 'calculator' ? 'active' : ''}`} onClick={(e) => { e.preventDefault(); scrollToSection('calculator'); }}>Orçamento</a></li>
               </ul>
               <a 
-                href="https://wa.me/5534998408523?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento."
+                href="https://wa.me/5534998250458?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-primary header-cta"

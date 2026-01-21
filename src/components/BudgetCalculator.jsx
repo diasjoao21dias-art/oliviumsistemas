@@ -104,7 +104,7 @@ function BudgetCalculator() {
 Gostaria de mais informações sobre este projeto!
     `.trim()
 
-    window.open(`https://wa.me/5534998408523?text=${encodeURIComponent(message)}`, '_blank')
+    window.open(`https://wa.me/5534998250458?text=${encodeURIComponent(message)}`, '_blank')
   }
 
   const budget = calculateBudget()

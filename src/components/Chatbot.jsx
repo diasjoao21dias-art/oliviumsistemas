@@ -86,7 +86,7 @@ function Chatbot() {
     }
     if (lowerMessage.includes('atendente') || lowerMessage.includes('humano') || lowerMessage.includes('pessoa')) {
       setTimeout(() => {
-        window.open('https://wa.me/5534998408523?text=Olá! Vim através do chat do site.', '_blank')
+        window.open('https://wa.me/5534998250458?text=Olá! Vim através do chat do site.', '_blank')
       }, 1000)
       return botResponses['atendente']
     }

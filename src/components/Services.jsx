@@ -113,7 +113,7 @@ function Services() {
   ]
 
   const handleServiceClick = (whatsappMsg) => {
-    const whatsappUrl = `https://wa.me/5534998408523?text=${encodeURIComponent(whatsappMsg)}`
+    const whatsappUrl = `https://wa.me/5534998250458?text=${encodeURIComponent(whatsappMsg)}`
     window.open(whatsappUrl, '_blank')
   }
 
