@@ -121,9 +121,9 @@ function Services() {
     <section className="services section" id="services">
       <div className="container">
         <div className="section-header animate-on-scroll animate-fadeInUp">
-          <h2 className="section-title">Nossos Serviços</h2>
+          <h2 className="section-title">Nossos <span className="text-gradient">Serviços</span> de Tecnologia</h2>
           <p className="section-subtitle">
-            Oferecemos soluções tecnológicas completas para transformar e impulsionar seu negócio
+            Soluções completas em desenvolvimento de sistemas e sites para empresas em Patrocínio MG e Triângulo Mineiro.
           </p>
         </div>
         
