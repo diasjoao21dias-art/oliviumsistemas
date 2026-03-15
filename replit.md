@@ -133,6 +133,33 @@ npm run preview
 
 ---
 
+## 🔧 Alterações Recentes (15/03/2026)
+
+### SEO Avançado - Otimizações de Nível Sênior
+
+#### 1. **Meta Tags Reforçadas**
+- ✅ Meta description reformulada com palavras-chave de cauda longa e call-to-action
+- ✅ Keywords expandidas com termos hiperlocais (bairro, cidade, região)
+- ✅ `og:image:width`, `og:image:height`, `og:image:alt` adicionados
+- ✅ `twitter:image:alt` adicionado
+- ✅ Geo tags adicionadas (`geo.region`, `geo.placename`, `geo.position`, `ICBM`)
+- ✅ `max-video-preview:-1` adicionado ao robots
+
+#### 2. **Structured Data (JSON-LD) — Múltiplos Schemas**
+- ✅ `ProfessionalService` enriquecido com `@id`, `logo`, `foundingDate`, `numberOfEmployees`, `postalCode`
+- ✅ `areaServed` com entidades nomeadas (City, AdministrativeArea, State) linkadas ao Wikidata
+- ✅ `hasOfferCatalog` com 6 serviços detalhados como `Offer > Service`
+- ✅ `WebSite` schema com referência ao publisher (conectado ao negócio via `@id`)
+- ✅ `FAQPage` schema com todas as 8 perguntas → rich snippets no Google
+- ✅ `BreadcrumbList` schema com 4 níveis de navegação
+
+#### 3. **Sitemap Corrigido**
+- ✅ Removidas âncoras `#services`, `#portfolio` etc. (Google não indexa hash URLs)
+- ✅ `lastmod` atualizado para 2026-03-15
+- ✅ Namespace XSD adicionado para conformidade W3C
+
+---
+
 ## 📞 Contato
 
 - **Telefone/WhatsApp:** (34) 99840-8523
