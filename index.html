@@ -305,6 +305,161 @@
   </head>
   <body>
     <div id="root"></div>
+
+    <!--
+      CONTEÚDO PRÉ-RENDERIZADO PARA INDEXAÇÃO
+      Este bloco garante que o Googlebot indexe todo o conteúdo
+      mesmo sem executar JavaScript (wave 1 de indexação).
+      O React substituirá este conteúdo ao montar o app.
+    -->
+    <noscript>
+      <style>
+        .seo-content { font-family: sans-serif; max-width: 1200px; margin: 0 auto; padding: 20px; }
+        .seo-content h1 { font-size: 2rem; margin-bottom: 1rem; }
+        .seo-content h2 { font-size: 1.5rem; margin: 2rem 0 1rem; border-bottom: 1px solid #eee; padding-bottom: 0.5rem; }
+        .seo-content h3 { font-size: 1.1rem; margin: 1rem 0 0.5rem; }
+        .seo-content ul { padding-left: 1.5rem; }
+        .seo-content li { margin-bottom: 0.3rem; }
+        .seo-content .testimonial { border-left: 3px solid #0066FF; padding-left: 1rem; margin-bottom: 1rem; }
+        .seo-content address { font-style: normal; }
+      </style>
+      <main class="seo-content">
+        <h1>Desenvolvimento de Sistemas e Sites em Patrocínio MG — Olivium Sistemas</h1>
+        <p>
+          A Olivium Sistemas é uma empresa especializada em desenvolvimento de sistemas personalizados,
+          criação de sites profissionais, e-commerce e aplicativos web em Patrocínio MG e Triângulo Mineiro.
+          Mais de 500 projetos entregues, 98% de clientes satisfeitos e 10 anos de experiência no mercado.
+        </p>
+
+        <h2>Nossos Serviços de Tecnologia em Patrocínio MG</h2>
+        <p>Soluções completas em desenvolvimento de sistemas e sites para empresas em Patrocínio MG e Triângulo Mineiro.</p>
+
+        <h3>Desenvolvimento de Sistemas</h3>
+        <p>Sistemas corporativos personalizados, ERPs, CRMs e soluções sob medida para otimizar seus processos de negócio em Patrocínio MG.</p>
+        <ul>
+          <li>Gestão empresarial</li>
+          <li>Automação de processos</li>
+          <li>Integração de sistemas</li>
+        </ul>
+
+        <h3>Sites Corporativos</h3>
+        <p>Sites institucionais modernos, responsivos e otimizados para SEO, transmitindo profissionalismo e credibilidade para empresas em Patrocínio e região.</p>
+        <ul>
+          <li>Design responsivo</li>
+          <li>SEO otimizado</li>
+          <li>Alta performance</li>
+        </ul>
+
+        <h3>E-commerce</h3>
+        <p>Lojas virtuais completas com sistemas de pagamento, gestão de estoque e experiência de compra excepcional.</p>
+        <ul>
+          <li>Pagamentos seguros</li>
+          <li>Gestão de produtos</li>
+          <li>Painel administrativo</li>
+        </ul>
+
+        <h3>Aplicativos Web</h3>
+        <p>Aplicações web progressivas (PWA) com performance nativa e experiência fluida em qualquer dispositivo.</p>
+        <ul>
+          <li>Funciona offline</li>
+          <li>Notificações push</li>
+          <li>Multiplataforma</li>
+        </ul>
+
+        <h3>Manutenção e Suporte</h3>
+        <p>Suporte técnico contínuo, atualizações, correções e melhorias para manter seu sistema sempre funcionando.</p>
+        <ul>
+          <li>Suporte 24/7</li>
+          <li>Atualizações regulares</li>
+          <li>Backup automático</li>
+        </ul>
+
+        <h3>Soluções em Nuvem</h3>
+        <p>Migração, hospedagem e gerenciamento de aplicações em nuvem com máxima segurança e escalabilidade.</p>
+        <ul>
+          <li>Alta disponibilidade</li>
+          <li>Escalabilidade</li>
+          <li>Segurança avançada</li>
+        </ul>
+
+        <h2>Setores Atendidos</h2>
+        <p>A Olivium Sistemas atende empresas de diversos setores em Patrocínio MG e Triângulo Mineiro:</p>
+        <ul>
+          <li><strong>Comércio:</strong> Soluções para varejo, atacado e distribuidoras</li>
+          <li><strong>Saúde:</strong> Sistemas para clínicas, hospitais e laboratórios em Patrocínio MG</li>
+          <li><strong>Educação:</strong> Plataformas para escolas e instituições de ensino</li>
+          <li><strong>Indústria:</strong> Gestão industrial e controle de produção</li>
+          <li><strong>Alimentação:</strong> Delivery, restaurantes e food service</li>
+          <li><strong>Construção:</strong> Gestão de obras e projetos</li>
+          <li><strong>Serviços:</strong> Empresas de consultoria e prestação de serviços</li>
+          <li><strong>Automotivo:</strong> Oficinas, concessionárias e auto peças</li>
+        </ul>
+
+        <h2>O Que Nossos Clientes Dizem</h2>
+
+        <div class="testimonial">
+          <h3>Maria Silva — CEO, TechCommerce</h3>
+          <p>"A Olivium transformou completamente nosso e-commerce. O sistema é robusto, intuitivo e aumentou nossas vendas em 150%. Equipe extremamente profissional!"</p>
+        </div>
+        <div class="testimonial">
+          <h3>João Santos — Diretor de TI, Indústria ABC</h3>
+          <p>"Implementaram um ERP completo em tempo recorde. O suporte é excepcional e o sistema atendeu todas as nossas necessidades. Recomendo fortemente!"</p>
+        </div>
+        <div class="testimonial">
+          <h3>Ana Costa — Gestora, Clínica Saúde+</h3>
+          <p>"O sistema de gestão hospitalar facilitou muito nosso dia a dia. Prontuários digitais, agendamentos e relatórios em um só lugar. Excelente trabalho!"</p>
+        </div>
+        <div class="testimonial">
+          <h3>Carlos Oliveira — Fundador, EduTech Online</h3>
+          <p>"Nossa plataforma EAD foi desenvolvida com tecnologia de ponta. Os alunos adoraram a interface e temos zero problemas técnicos. Parceria perfeita!"</p>
+        </div>
+        <div class="testimonial">
+          <h3>Patricia Lima — Diretora Comercial, Loja Fashion</h3>
+          <p>"Site lindo, rápido e que converte muito bem. O investimento se pagou em poucos meses. A equipe entendeu exatamente o que precisávamos."</p>
+        </div>
+        <div class="testimonial">
+          <h3>Roberto Mendes — CEO, Delivery Express</h3>
+          <p>"App de delivery perfeito! Interface fluida, pedidos em tempo real e integração com os motoboys. Nossos clientes elogiam muito a experiência."</p>
+        </div>
+
+        <h2>Perguntas Frequentes — Desenvolvimento de Sistemas e Sites em Patrocínio MG</h2>
+
+        <h3>Quanto tempo leva para desenvolver um site ou sistema?</h3>
+        <p>O prazo varia de acordo com a complexidade do projeto. Um site institucional pode ficar pronto em 2-3 semanas, enquanto sistemas complexos podem levar de 1 a 3 meses. Após conversarmos sobre seu projeto, apresentamos um cronograma detalhado.</p>
+
+        <h3>Qual é a faixa de preço dos serviços?</h3>
+        <p>Cada projeto é único e o investimento varia conforme funcionalidades e complexidade. Sites institucionais começam a partir de R$ 500, e-commerces a partir de R$ 5.000, e sistemas personalizados são orçados após análise detalhada. Entre em contato para um orçamento personalizado!</p>
+
+        <h3>Vocês fazem manutenção e suporte após a entrega?</h3>
+        <p>Sim! Oferecemos planos de manutenção mensal que incluem atualizações, correções, backups automáticos e suporte técnico. Também prestamos suporte pontual para demandas específicas.</p>
+
+        <h3>O site será responsivo (funciona em celular)?</h3>
+        <p>Absolutamente! Todos os nossos projetos são desenvolvidos com design responsivo, garantindo perfeita visualização e funcionamento em smartphones, tablets e desktops.</p>
+
+        <h3>Posso atualizar o conteúdo do site sozinho?</h3>
+        <p>Sim! Entregamos um painel administrativo intuitivo onde você pode atualizar textos, imagens, produtos (no caso de e-commerce) e outras informações sem precisar de conhecimento técnico. Também oferecemos treinamento completo.</p>
+
+        <h3>Vocês hospedam o site/sistema?</h3>
+        <p>Sim, oferecemos serviço completo de hospedagem em nuvem com alta disponibilidade, backups automáticos e certificado SSL (segurança). Você também pode optar por usar sua própria hospedagem, se preferir.</p>
+
+        <h3>O site terá otimização para Google (SEO)?</h3>
+        <p>Sim! Todos os nossos sites são desenvolvidos seguindo as melhores práticas de SEO: URLs amigáveis, meta tags otimizadas, velocidade de carregamento, estrutura adequada e código limpo para melhor ranqueamento no Google.</p>
+
+        <h3>Como funciona o processo de desenvolvimento?</h3>
+        <p>Primeiro, fazemos uma reunião para entender suas necessidades. Depois, criamos um protótipo/layout para aprovação. Após aprovado, desenvolvemos o projeto, fazemos testes e entregamos. Você acompanha cada etapa e pode solicitar ajustes durante o desenvolvimento.</p>
+
+        <h2>Contato — Olivium Sistemas em Patrocínio MG</h2>
+        <address>
+          <p><strong>Olivium Sistemas e Consultoria Digital</strong></p>
+          <p>Rua Secundino Farias Tavares, 555 — Patrocínio, MG — CEP 38740-000</p>
+          <p>Telefone / WhatsApp: <a href="tel:+5534998408523">(34) 99840-8523</a></p>
+          <p>E-mail: <a href="mailto:dom_dias21@hotmail.com">dom_dias21@hotmail.com</a></p>
+          <p>Atendimento: Segunda a Sexta, das 8h às 18h</p>
+          <p>Atendemos: Patrocínio MG, Patos de Minas, Uberaba, Uberlândia, Triângulo Mineiro e região.</p>
+        </address>
+      </main>
+    </noscript>
+
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
