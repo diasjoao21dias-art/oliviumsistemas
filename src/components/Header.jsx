@@ -126,10 +126,9 @@ function Header() {
               <ul className="nav-menu">
                 <li><a href="#home" className={`nav-link ${activeSection === 'home' ? 'active' : ''}`} onClick={(e) => { e.preventDefault(); scrollToSection('home'); }}>Início</a></li>
                 <li><a href="#services" className={`nav-link ${activeSection === 'services' ? 'active' : ''}`} onClick={(e) => { e.preventDefault(); scrollToSection('services'); }}>Serviços</a></li>
-                <li><a href="#industries" className={`nav-link ${activeSection === 'industries' ? 'active' : ''}`} onClick={(e) => { e.preventDefault(); scrollToSection('industries'); }}>Setores</a></li>
                 <li><a href="#portfolio" className={`nav-link ${activeSection === 'portfolio' ? 'active' : ''}`} onClick={(e) => { e.preventDefault(); scrollToSection('portfolio'); }}>Portfólio</a></li>
-                <li><a href="#testimonials" className={`nav-link ${activeSection === 'testimonials' ? 'active' : ''}`} onClick={(e) => { e.preventDefault(); scrollToSection('testimonials'); }}>Depoimentos</a></li>
                 <li><a href="#calculator" className={`nav-link ${activeSection === 'calculator' ? 'active' : ''}`} onClick={(e) => { e.preventDefault(); scrollToSection('calculator'); }}>Orçamento</a></li>
+                <li><a href="#contact" className={`nav-link ${activeSection === 'contact' ? 'active' : ''}`} onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }}>Contato</a></li>
               </ul>
               <a 
                 href="https://wa.me/5534998250458?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento."

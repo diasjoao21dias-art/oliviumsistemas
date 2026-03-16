@@ -8,8 +8,6 @@ function Hero() {
     const element = document.getElementById('contact')
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' })
-      
-      // No mobile, foca direto no primeiro campo do formulário
       setTimeout(() => {
         const nameInput = document.getElementById('name')
         if (nameInput && window.innerWidth <= 768) {
@@ -22,6 +20,13 @@ function Hero() {
 
   const scrollToServices = () => {
     const element = document.getElementById('services')
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
+  const scrollToCalculator = () => {
+    const element = document.getElementById('calculator')
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' })
     }
@@ -58,8 +63,8 @@ function Hero() {
         <div className="hero-content">
           <div className="hero-text">
             <div className="hero-badge animate-on-scroll animate-fadeIn">
-              <span className="badge-icon">⚡</span>
-              <span className="badge-text">Soluções Digitais de Alta Performance</span>
+              <span className="badge-icon">🏆</span>
+              <span className="badge-text">+500 projetos entregues em Patrocínio MG</span>
             </div>
             
             <h1 className="hero-title animate-on-scroll animate-fadeInUp delay-100">
@@ -72,16 +77,19 @@ function Hero() {
             </p>
             
             <div className="hero-buttons animate-on-scroll animate-fadeInUp delay-300">
-              <button className="btn btn-primary btn-large btn-magnetic" onClick={scrollToContact}>
-                <span>Iniciar Projeto</span>
+              <button className="btn btn-primary btn-xl btn-magnetic" onClick={scrollToContact}>
+                <span>Solicitar Orçamento Grátis</span>
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                   <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </button>
-              <button className="btn btn-outline btn-large btn-magnetic" onClick={scrollToServices}>
-                <span>Explorar Serviços</span>
+              <button className="btn btn-outline btn-magnetic" onClick={scrollToServices}>
+                <span>Ver Serviços</span>
               </button>
             </div>
+            <button className="hero-calc-link animate-on-scroll animate-fadeInUp delay-350" onClick={scrollToCalculator}>
+              <span>→ Simule seu orçamento em 1 minuto</span>
+            </button>
             
             <div className="hero-stats animate-on-scroll animate-fadeInUp delay-400">
               <div className="stat-item">

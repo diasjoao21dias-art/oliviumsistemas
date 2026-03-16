@@ -2,7 +2,7 @@ import React from 'react'
 import { Outlet } from 'react-router-dom'
 import Header from './Header'
 import Footer from './Footer'
-import Chatbot from './Chatbot'
+import WhatsAppButton from './WhatsAppButton'
 import ScrollToTop from './ScrollToTop'
 import ScrollAnimations from './ScrollAnimations'
 
@@ -13,7 +13,7 @@ function Layout() {
       <Header />
       <Outlet />
       <Footer />
-      <Chatbot />
+      <WhatsAppButton />
       <ScrollToTop />
     </div>
   )

@@ -63,22 +63,22 @@
 .shape-2 {
   width: 500px;
   height: 500px;
-  background: linear-gradient(135deg, rgba(0, 255, 136, 0.4) 0%, rgba(0, 229, 255, 0.4) 100%);
+  background: linear-gradient(135deg, rgba(157, 78, 237, 0.35) 0%, rgba(0, 229, 255, 0.35) 100%);
   bottom: -150px;
   left: -150px;
   animation: float 25s ease-in-out infinite reverse;
-  box-shadow: 0 0 120px rgba(0, 255, 136, 0.3);
+  box-shadow: 0 0 120px rgba(157, 78, 237, 0.25);
 }
 
 .shape-3 {
   width: 400px;
   height: 400px;
-  background: linear-gradient(135deg, rgba(255, 107, 53, 0.35) 0%, rgba(157, 78, 237, 0.35) 100%);
+  background: linear-gradient(135deg, rgba(0, 229, 255, 0.2) 0%, rgba(157, 78, 237, 0.25) 100%);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   animation: pulse-shape 20s ease-in-out infinite;
-  box-shadow: 0 0 100px rgba(255, 107, 53, 0.3);
+  box-shadow: 0 0 100px rgba(157, 78, 237, 0.2);
 }
 
 @keyframes float {
@@ -218,7 +218,7 @@
 }
 
 .hero-title .highlight {
-  background: linear-gradient(135deg, var(--primary-cyan) 0%, var(--neon-purple) 50%, var(--energy-orange) 100%);
+  background: linear-gradient(135deg, var(--primary-cyan) 0%, var(--neon-purple) 100%);
   background-size: 200% 200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -248,7 +248,7 @@
 .hero-buttons {
   display: flex;
   gap: 16px;
-  margin-bottom: 60px;
+  margin-bottom: 16px;
 }
 
 .btn-large {
@@ -442,13 +442,41 @@
 .card-metric {
   font-size: 1.5rem;
   font-weight: 700;
-  background: linear-gradient(135deg, var(--primary-cyan) 0%, var(--neon-purple) 50%, var(--energy-orange) 100%);
+  background: linear-gradient(135deg, var(--primary-cyan) 0%, var(--neon-purple) 100%);
   background-size: 200% 200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   animation: gradientFlow 4s ease infinite !important;
   will-change: background-position;
+}
+
+.btn-xl {
+  padding: 20px 52px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.hero-calc-link {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px 0;
+  margin-bottom: 44px;
+  display: inline-block;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--neon-purple);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  opacity: 0.85;
+}
+
+.hero-calc-link:hover {
+  opacity: 1;
+  transform: translateX(4px);
+  color: var(--primary-cyan);
 }
 
 @media (max-width: 1200px) {

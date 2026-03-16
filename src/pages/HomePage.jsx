@@ -1,5 +1,6 @@
 import React, { lazy, Suspense } from 'react'
 import Hero from '../components/Hero'
+import ClientLogos from '../components/ClientLogos'
 import Services from '../components/Services'
 
 const Industries = lazy(() => import('../components/Industries'))
@@ -13,6 +14,7 @@ function HomePage() {
   return (
     <>
       <Hero />
+      <ClientLogos />
       <Services />
       <Suspense fallback={<div style={{ minHeight: '200px' }} />}>
         <Industries />

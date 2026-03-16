@@ -1,0 +1,92 @@
+.client-logos {
+  padding: 40px 0 60px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.client-logos-label {
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-light);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 28px;
+}
+
+.client-logos-track-wrapper {
+  overflow: hidden;
+  mask-image: linear-gradient(90deg, transparent 0%, black 10%, black 90%, transparent 100%);
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, black 10%, black 90%, transparent 100%);
+}
+
+.client-logos-track {
+  display: flex;
+  gap: 20px;
+  animation: logosScroll 28s linear infinite;
+  width: max-content;
+}
+
+.client-logos-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes logosScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.client-logo-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 16px 28px;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 229, 255, 0.15);
+  border-radius: 14px;
+  white-space: nowrap;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  min-width: 160px;
+}
+
+.client-logo-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 229, 255, 0.12);
+}
+
+.client-logo-stars {
+  font-size: 0.75rem;
+  color: #f59e0b;
+  letter-spacing: 1px;
+}
+
+.client-logo-name {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.client-logo-sector {
+  font-size: 0.75rem;
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .client-logos {
+    padding: 30px 0 48px;
+  }
+
+  .client-logo-card {
+    padding: 14px 22px;
+    min-width: 140px;
+  }
+}
