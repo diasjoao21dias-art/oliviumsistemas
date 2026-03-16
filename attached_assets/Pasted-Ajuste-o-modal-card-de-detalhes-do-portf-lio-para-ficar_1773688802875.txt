@@ -1,0 +1,82 @@
+Ajuste o modal/card de detalhes do portfólio para ficar mais compacto, centralizado e sem sobrepor o navbar.
+
+O problema atual:
+- o modal está grande demais
+- ele sobe muito na tela
+- fica visualmente encostado/sobreposto no navbar
+- não passa sensação de card centralizado
+- parece mais uma tela aberta do que um modal elegante
+
+Objetivo:
+Quero um modal menor, mais compacto, bem centralizado no meio da viewport, com espaçamento visível em cima, embaixo e nas laterais.
+
+O que fazer:
+
+1. Centralização real
+- centralizar o modal no meio da tela horizontal e verticalmente
+- garantir espaço entre o topo do modal e o navbar
+- o modal não deve começar lá em cima
+
+2. Tamanho do modal
+- reduzir largura e altura geral do card
+- deixar com aparência de caixa flutuante no centro da tela
+- usar algo próximo de:
+  - width: min(820px, calc(100vw - 48px))
+  - max-height: min(78vh, 760px)
+- em telas menores, manter responsivo sem cortar
+
+3. Estrutura visual
+- o modal deve parecer um card premium
+- bordas arredondadas
+- sombra forte e limpa
+- bom espaçamento interno
+- overlay escuro atrás para destacar o card
+
+4. Header do modal
+- manter botão X bem visível no canto superior direito
+- esse botão não pode ficar escondido nem colado na borda
+- criar uma barra/header interna com padding adequado
+
+5. Conteúdo interno
+- só a área interna do modal pode rolar
+- não deixar a imagem/banner ocupar altura exagerada
+- limitar banner do topo para algo como 180px a 220px no desktop
+- usar object-fit: cover
+
+6. Navbar
+- o modal não deve ficar por trás nem colado no navbar
+- se necessário, aumentar z-index do overlay/modal
+- mas o mais importante é manter o modal visualmente mais baixo e centralizado
+
+7. Comportamento esperado
+- ao abrir: aparece um card menor no centro da tela
+- com margem visível acima, abaixo e dos lados
+- sem sensação de conteúdo cortado
+- sem invadir a área do header/navbar
+- com scroll apenas dentro do card
+
+Sugestão de implementação:
+- overlay:
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(10, 10, 20, 0.55);
+
+- modal:
+  width: min(820px, calc(100vw - 48px));
+  max-height: min(78vh, 760px);
+  border-radius: 24px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+- conteúdo rolável:
+  overflow-y: auto;
+  overscroll-behavior: contain;
+
+- header fixo/sticky dentro do modal para o botão fechar
+
+Quero um resultado mais elegante e compacto, com aparência de card/modal mesmo, e não de painel grande encostando no topo da página.
