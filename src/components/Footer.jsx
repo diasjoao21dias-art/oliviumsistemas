@@ -42,7 +42,7 @@ function Footer() {
               <li><a href="#portfolio">Portfólio</a></li>
               <li><a href="#testimonials">Depoimentos</a></li>
               <li><a href="#contact">Contato</a></li>
-              <li><a href="#careers">Carreiras</a></li>
+              <li><a href="#calculator">Orçamento</a></li>
             </ul>
           </div>
 

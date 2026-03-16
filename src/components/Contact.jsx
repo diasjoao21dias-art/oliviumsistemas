@@ -142,7 +142,7 @@ function Contact() {
   }
 
   const sendWhatsApp = () => {
-    const whatsappNumber = '5534998250458'
+    const whatsappNumber = '5534998408523'
     const whatsappMessage = `
 *Novo Contato do Site*
 
@@ -228,8 +228,8 @@ ${formData.message}
               <div className="contact-item">
                 <div className="contact-icon">📱</div>
                 <div>
-                  <h4>Telefone</h4>
-                  <p>(34) 99825-0458</p>
+                  <h4>Telefone / WhatsApp</h4>
+                  <p><a href="tel:+5534998408523" style={{color:'inherit',textDecoration:'none'}}>(34) 99840-8523</a></p>
                 </div>
               </div>
               
@@ -251,9 +251,22 @@ ${formData.message}
             </div>
 
             <div className="social-links">
-              <a href="https://www.linkedin.com/in/jo%C3%A3o-dias-84344b1a9/" target="_blank" rel="noopener noreferrer" className="social-link btn-modern">💼 LinkedIn</a>
-              <a href="https://www.facebook.com/share/1BKAqKvwvr/" target="_blank" rel="noopener noreferrer" className="social-link btn-modern">📘 Facebook</a>
-              <a href="https://www.instagram.com/joaofilhomc?igsh=MWJjemJueXc0bTIzaQ==" target="_blank" rel="noopener noreferrer" className="social-link btn-modern">📸 Instagram</a>
+              <a href="https://www.linkedin.com/in/jo%C3%A3o-dias-84344b1a9/" target="_blank" rel="noopener noreferrer" className="social-link btn-modern" aria-label="LinkedIn da Olivium Sistemas">💼 LinkedIn</a>
+              <a href="https://www.facebook.com/share/1BKAqKvwvr/" target="_blank" rel="noopener noreferrer" className="social-link btn-modern" aria-label="Facebook da Olivium Sistemas">📘 Facebook</a>
+              <a href="https://www.instagram.com/joaofilhomc?igsh=MWJjemJueXc0bTIzaQ==" target="_blank" rel="noopener noreferrer" className="social-link btn-modern" aria-label="Instagram da Olivium Sistemas">📸 Instagram</a>
+            </div>
+
+            <div className="contact-map">
+              <iframe
+                title="Localização Olivium Sistemas em Patrocínio MG"
+                src="https://maps.google.com/maps?q=-18.943,-46.993&z=15&output=embed"
+                width="100%"
+                height="200"
+                style={{ border: 0, borderRadius: '12px', display: 'block' }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
             </div>
           </div>
 
@@ -292,6 +305,8 @@ ${formData.message}
                 onBlur={handleBlur}
                 className={errors.name && touched.name ? 'error' : ''}
                 placeholder="Seu nome"
+                autoComplete="name"
+                aria-required="true"
               />
               {errors.name && touched.name && (
                 <span className="error-message">{errors.name}</span>
@@ -310,6 +325,8 @@ ${formData.message}
                   onBlur={handleBlur}
                   className={errors.email && touched.email ? 'error' : ''}
                   placeholder="seu@email.com"
+                  autoComplete="email"
+                  aria-required="true"
                 />
                 {errors.email && touched.email && (
                   <span className="error-message">{errors.email}</span>
@@ -326,7 +343,9 @@ ${formData.message}
                   onChange={handleChange}
                   onBlur={handleBlur}
                   className={errors.phone && touched.phone ? 'error' : ''}
-                  placeholder="(11) 98765-4321"
+                  placeholder="(34) 99999-9999"
+                  autoComplete="tel"
+                  aria-required="true"
                 />
                 {errors.phone && touched.phone && (
                   <span className="error-message">{errors.phone}</span>

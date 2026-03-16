@@ -165,6 +165,7 @@ function Portfolio() {
                   className="portfolio-img"
                   loading="lazy"
                   decoding="async"
+                  onError={(e) => { e.currentTarget.style.display = 'none' }}
                 />
                 <div className="portfolio-overlay">
                   <span className="portfolio-emoji-small">{project.emoji}</span>
@@ -211,6 +212,7 @@ function Portfolio() {
                     alt={selectedProject.title}
                     loading="lazy"
                     decoding="async"
+                    onError={(e) => { e.currentTarget.parentElement.style.display = 'none' }}
                   />
                 </div>
 
@@ -247,7 +249,7 @@ function Portfolio() {
                   <button
                     className="btn btn-primary modal-cta"
                     onClick={() => {
-                      window.open('https://wa.me/5534998250458?text=' + encodeURIComponent(`Olá! Gostaria de saber mais sobre projetos similares ao ${selectedProject.title}`), '_blank')
+                      window.open('https://wa.me/5534998408523?text=' + encodeURIComponent(`Olá! Gostaria de saber mais sobre projetos similares ao ${selectedProject.title}`), '_blank')
                     }}
                   >
                     Solicitar Projeto Similar
