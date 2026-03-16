@@ -1,9 +1,37 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './Portfolio.css'
 
 function Portfolio() {
   const [activeFilter, setActiveFilter] = useState('todos')
   const [selectedProject, setSelectedProject] = useState(null)
+
+  useEffect(() => {
+    if (selectedProject) {
+      const scrollY = window.scrollY
+      document.body.style.overflow = 'hidden'
+      document.body.style.position = 'fixed'
+      document.body.style.top = `-${scrollY}px`
+      document.body.style.width = '100%'
+      document.body.dataset.modalScrollY = scrollY.toString()
+    } else {
+      const scrollY = parseInt(document.body.dataset.modalScrollY || '0', 10)
+      document.body.style.overflow = ''
+      document.body.style.position = ''
+      document.body.style.top = ''
+      document.body.style.width = ''
+      delete document.body.dataset.modalScrollY
+      if (scrollY) {
+        window.scrollTo(0, scrollY)
+      }
+    }
+
+    return () => {
+      document.body.style.overflow = ''
+      document.body.style.position = ''
+      document.body.style.top = ''
+      document.body.style.width = ''
+    }
+  }, [selectedProject])
 
   const projects = [
     {
