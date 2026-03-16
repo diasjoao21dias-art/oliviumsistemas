@@ -1,0 +1,64 @@
+Agora preciso ajustar o layout do modal/card de detalhes do portfólio.
+
+Problemas atuais:
+1. O botão "X" de fechar não está visível ou está mal posicionado.
+2. O modal parece cortado na tela.
+3. O card não está bem adaptado à viewport.
+4. A experiência visual está apertada e com pouco respiro nas bordas.
+
+Objetivo:
+Fazer o modal abrir centralizado, totalmente visível, responsivo e com o botão de fechar sempre acessível.
+
+O que precisa corrigir:
+
+1. Botão fechar
+- adicionar um botão "X" visível no topo direito do modal
+- deixar o botão acima do conteúdo
+- usar position: sticky ou absolute no header do modal
+- garantir alto contraste, bom tamanho e fácil clique
+- manter z-index maior que imagem e conteúdo
+- no mobile, aumentar área de toque
+
+2. Estrutura do modal
+- o modal deve abrir centralizado na tela
+- não pode parecer cortado
+- deve respeitar margens laterais e superiores/inferiores
+- usar largura responsiva, por exemplo:
+  - width: min(1100px, calc(100vw - 32px))
+  - max-height: calc(100vh - 32px)
+- evitar que qualquer parte fique fora da viewport
+
+3. Área interna
+- o scroll deve existir apenas dentro do modal
+- imagem/topo não pode empurrar o conteúdo para fora da tela
+- limitar altura da imagem/banner do projeto
+- usar object-fit: cover
+- deixar o conteúdo principal em uma área rolável
+
+4. Header fixo do modal
+- criar uma barra superior do modal com:
+  - título
+  - botão fechar
+- essa barra deve ficar sempre visível enquanto o conteúdo rola
+- usar background sólido ou levemente translúcido para não sumir sobre a imagem
+
+5. Responsividade
+- desktop: modal maior, centralizado e elegante
+- tablet: reduzir largura e alturas
+- mobile: ocupar quase toda a tela sem cortar, com espaçamento interno menor
+- garantir que o botão fechar continue aparecendo em qualquer resolução
+
+6. UX
+- fechar ao clicar no X
+- fechar ao clicar no overlay
+- fechar com tecla ESC
+- manter fundo travado enquanto o modal estiver aberto
+
+Se estiver em React/CSS, pode reorganizar assim:
+- overlay fixo ocupando toda a viewport
+- modal container com max-width e max-height responsivos
+- header sticky
+- body do modal com overflow-y: auto
+- botão close com z-index alto
+
+Quero um resultado mais profissional, com aparência de modal premium, bem encaixado na tela e sem nenhum elemento cortado.

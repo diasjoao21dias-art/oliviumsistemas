@@ -33,6 +33,16 @@ function Portfolio() {
     }
   }, [selectedProject])
 
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape' && selectedProject) {
+        setSelectedProject(null)
+      }
+    }
+    document.addEventListener('keydown', handleKeyDown)
+    return () => document.removeEventListener('keydown', handleKeyDown)
+  }, [selectedProject])
+
   const projects = [
     {
       title: 'Sistema ERP Completo',
@@ -175,67 +185,76 @@ function Portfolio() {
         </div>
         
         {selectedProject && (
-          <div className="modal-overlay" onClick={() => setSelectedProject(null)}>
+          <div className="modal-overlay" onClick={() => setSelectedProject(null)} role="dialog" aria-modal="true">
             <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-              <button className="modal-close" onClick={() => setSelectedProject(null)}>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                  <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-                </svg>
-              </button>
-              
-              <div className="modal-image">
-                <img 
-                  src={selectedProject.image} 
-                  alt={selectedProject.title}
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
-              
-              <div className="modal-body">
-                <div className="modal-header">
-                  <span className="modal-emoji">{selectedProject.emoji}</span>
-                  <h2>{selectedProject.title}</h2>
+
+              <div className="modal-sticky-header">
+                <div className="modal-sticky-title">
+                  <span className="modal-emoji-small-header">{selectedProject.emoji}</span>
+                  <span>{selectedProject.title}</span>
                 </div>
-                
-                <div className="modal-meta">
-                  <div className="meta-item">
-                    <strong>Cliente:</strong> {selectedProject.client}
-                  </div>
-                  <div className="meta-item">
-                    <strong>Ano:</strong> {selectedProject.year}
-                  </div>
-                </div>
-                
-                <p className="modal-description">{selectedProject.fullDescription}</p>
-                
-                <div className="modal-section">
-                  <h3>Tecnologias Utilizadas</h3>
-                  <div className="tech-tags">
-                    {selectedProject.technologies.map((tech, idx) => (
-                      <span key={idx} className="tech-tag">{tech}</span>
-                    ))}
-                  </div>
-                </div>
-                
-                <div className="modal-section">
-                  <h3>Recursos Principais</h3>
-                  <div className="portfolio-tags">
-                    {selectedProject.tags.map((tag, idx) => (
-                      <span key={idx} className="tag badge-modern">{tag}</span>
-                    ))}
-                  </div>
-                </div>
-                
-                <button 
-                  className="btn btn-primary modal-cta"
-                  onClick={() => {
-                    window.open('https://wa.me/5534998250458?text=' + encodeURIComponent(`Olá! Gostaria de saber mais sobre projetos similares ao ${selectedProject.title}`), '_blank')
-                  }}
+                <button
+                  className="modal-close"
+                  onClick={() => setSelectedProject(null)}
+                  aria-label="Fechar modal"
                 >
-                  Solicitar Projeto Similar
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
                 </button>
               </div>
+
+              <div className="modal-scrollable">
+                <div className="modal-image">
+                  <img
+                    src={selectedProject.image}
+                    alt={selectedProject.title}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+
+                <div className="modal-body">
+                  <div className="modal-meta">
+                    <div className="meta-item">
+                      <strong>Cliente:</strong> {selectedProject.client}
+                    </div>
+                    <div className="meta-item">
+                      <strong>Ano:</strong> {selectedProject.year}
+                    </div>
+                  </div>
+
+                  <p className="modal-description">{selectedProject.fullDescription}</p>
+
+                  <div className="modal-section">
+                    <h3>Tecnologias Utilizadas</h3>
+                    <div className="tech-tags">
+                      {selectedProject.technologies.map((tech, idx) => (
+                        <span key={idx} className="tech-tag">{tech}</span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="modal-section">
+                    <h3>Recursos Principais</h3>
+                    <div className="portfolio-tags">
+                      {selectedProject.tags.map((tag, idx) => (
+                        <span key={idx} className="tag badge-modern">{tag}</span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <button
+                    className="btn btn-primary modal-cta"
+                    onClick={() => {
+                      window.open('https://wa.me/5534998250458?text=' + encodeURIComponent(`Olá! Gostaria de saber mais sobre projetos similares ao ${selectedProject.title}`), '_blank')
+                    }}
+                  >
+                    Solicitar Projeto Similar
+                  </button>
+                </div>
+              </div>
+
             </div>
           </div>
         )}
