@@ -6,10 +6,12 @@
   z-index: 100000;
   background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   border-bottom: none;
   box-shadow: none;
   overflow: visible;
+  padding-top: env(safe-area-inset-top, 0px);
 }
 
 .header-gradient-border {
@@ -353,8 +355,8 @@
   .menu-toggle {
     display: flex !important;
     position: fixed !important;
-    top: 1rem !important;
-    right: 1rem !important;
+    top: calc(1rem + env(safe-area-inset-top, 0px)) !important;
+    right: max(1rem, env(safe-area-inset-right, 1rem)) !important;
     z-index: 100002 !important;
     background: white !important;
     border-radius: 8px !important;

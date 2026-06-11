@@ -1,5 +1,6 @@
 .hero {
   min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   align-items: center;
   position: relative;
@@ -599,15 +600,16 @@
 
 @media (max-width: 480px) {
   .hero {
-    padding-top: 75px;
+    padding-top: calc(72px + env(safe-area-inset-top, 0px));
     padding-bottom: 40px;
     overflow: hidden;
+    min-height: auto;
   }
   
   .hero-title {
     font-size: 2rem;
     letter-spacing: -0.8px;
-    margin-bottom: 18px;
+    margin-bottom: 16px;
     line-height: 1.2;
     word-wrap: break-word;
     max-width: 100%;
@@ -622,7 +624,7 @@
   
   .hero-badge {
     padding: 8px 14px;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
     max-width: 100%;
     font-size: 0.85rem;
   }
@@ -636,8 +638,8 @@
   }
   
   .hero-buttons {
-    gap: 24px;
-    margin-bottom: 36px;
+    gap: 14px;
+    margin-bottom: 12px;
     width: 100%;
   }
   
@@ -652,17 +654,23 @@
     touch-action: manipulation;
   }
 
+  .hero-calc-link {
+    margin-bottom: 24px;
+    font-size: 0.9rem;
+    display: block;
+  }
+
   .hero-stats {
     flex-wrap: wrap;
-    gap: 20px 14px;
-    padding: 20px 0;
+    gap: 16px 12px;
+    padding: 16px 0;
     justify-content: center;
   }
   
   .stat-item {
     flex: 1;
-    min-width: calc(50% - 7px);
-    max-width: calc(50% - 7px);
+    min-width: calc(50% - 6px);
+    max-width: calc(50% - 6px);
     text-align: center;
   }
   
@@ -679,56 +687,6 @@
   }
   
   .hero-visual {
-    height: 360px;
-    max-width: 100%;
-    width: 100%;
-  }
-  
-  .visual-card {
-    padding: 14px 16px;
-    max-width: calc(100% - 16px);
-  }
-  
-  .card-icon {
-    font-size: 1.625rem;
-    width: 44px;
-    height: 44px;
-  }
-  
-  .card-title {
-    font-size: 0.875rem;
-  }
-  
-  .card-1 {
-    top: 0;
-    left: 0;
-    right: auto;
-  }
-  
-  .card-2 {
-    top: 120px;
-    right: 0;
-    left: auto;
-    max-width: calc(100% - 16px);
-  }
-  
-  .card-3 {
-    top: 240px;
-    left: 0;
-    right: auto;
-    bottom: auto;
-    max-width: calc(100% - 16px);
-  }
-  
-  .card-bar {
-    height: 4px;
-  }
-  
-  .card-metric {
-    font-size: 1.25rem;
-  }
-  
-  .status-text {
-    font-size: 0.75rem;
+    display: none;
   }
 }

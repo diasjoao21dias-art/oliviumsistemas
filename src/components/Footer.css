@@ -202,7 +202,7 @@
 
 @media (max-width: 480px) {
   .footer {
-    padding: 50px 0 20px;
+    padding: 50px 0 calc(20px + env(safe-area-inset-bottom, 0px));
   }
   
   .footer-content {

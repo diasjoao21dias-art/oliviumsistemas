@@ -43,8 +43,8 @@
   .whatsapp-float {
     width: 56px;
     height: 56px;
-    bottom: 165px;
-    right: 18px;
+    bottom: calc(165px + env(safe-area-inset-bottom, 0px));
+    right: max(18px, env(safe-area-inset-right, 18px));
   }
   
   .whatsapp-icon {
@@ -57,8 +57,8 @@
   .whatsapp-float {
     width: 52px;
     height: 52px;
-    bottom: 155px;
-    right: 15px;
+    bottom: calc(155px + env(safe-area-inset-bottom, 0px));
+    right: max(15px, env(safe-area-inset-right, 15px));
   }
   
   .whatsapp-icon {
