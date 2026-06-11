@@ -73,7 +73,7 @@ function Hero() {
             
             <p className="hero-description animate-on-scroll animate-fadeInUp delay-200">
               A Olivium é uma empresa de software especialista em desenvolver sistemas personalizados, sites corporativos e aplicativos web 
-              com tecnologia de ponta para impulsionar seu negócio no Triângulo Mineiro.
+              com tecnologia de ponta para impulsionar seu negócio. <strong>Atendemos todo o Brasil de forma remota.</strong>
             </p>
             
             <div className="hero-buttons animate-on-scroll animate-fadeInUp delay-300">

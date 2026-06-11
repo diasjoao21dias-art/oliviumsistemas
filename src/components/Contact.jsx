@@ -213,7 +213,7 @@ ${formData.message}
           <div className="contact-info glass-card animate-on-scroll animate-fadeInLeft delay-200">
             <h3 className="contact-info-title">Fale Conosco</h3>
             <p className="contact-info-text">
-              Nossa equipe está pronta para atender você e desenvolver a solução perfeita para seu negócio.
+              Nossa equipe está pronta para atender você e desenvolver a solução perfeita para seu negócio. <strong>Atendemos todo o Brasil de forma remota.</strong>
             </p>
             
             <div className="contact-items">
