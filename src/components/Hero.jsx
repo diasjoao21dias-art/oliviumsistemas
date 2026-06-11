@@ -64,11 +64,11 @@ function Hero() {
           <div className="hero-text">
             <div className="hero-badge animate-on-scroll animate-fadeIn">
               <span className="badge-icon">🏆</span>
-              <span className="badge-text">+500 projetos entregues em Patrocínio MG</span>
+              <span className="badge-text">+500 projetos entregues em Monte Carmelo MG</span>
             </div>
             
             <h1 className="hero-title animate-on-scroll animate-fadeInUp delay-100">
-              Desenvolvimento de <span className="highlight">Sistemas</span> e Sites em <span className="highlight">Patrocínio MG</span>
+              Desenvolvimento de <span className="highlight">Sistemas</span> e Sites em <span className="highlight">Monte Carmelo MG</span>
             </h1>
             
             <p className="hero-description animate-on-scroll animate-fadeInUp delay-200">

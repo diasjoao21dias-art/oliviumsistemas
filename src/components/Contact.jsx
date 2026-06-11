@@ -237,7 +237,7 @@ ${formData.message}
                 <div className="contact-icon">📍</div>
                 <div>
                   <h4>Localização</h4>
-                  <p>Rua Secundino Farias Tavares, 555<br/>Centro - Patrocínio, MG - Brasil</p>
+                  <p>Monte Carmelo, MG - Brasil<br/>CEP 38500-000</p>
                 </div>
               </div>
               
@@ -258,8 +258,8 @@ ${formData.message}
 
             <div className="contact-map">
               <iframe
-                title="Localização Olivium Sistemas em Patrocínio MG"
-                src="https://maps.google.com/maps?q=-18.943,-46.993&z=15&output=embed"
+                title="Localização Olivium Sistemas em Monte Carmelo MG"
+                src="https://maps.google.com/maps?q=-18.727,-47.499&z=15&output=embed"
                 width="100%"
                 height="200"
                 style={{ border: 0, borderRadius: '12px', display: 'block' }}

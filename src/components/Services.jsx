@@ -123,7 +123,7 @@ function Services() {
         <div className="section-header animate-on-scroll animate-fadeInUp">
           <h2 className="section-title">Nossos <span className="text-gradient">Serviços</span> de Tecnologia</h2>
           <p className="section-subtitle">
-            Soluções completas em desenvolvimento de sistemas e sites para empresas em Patrocínio MG e Triângulo Mineiro.
+            Soluções completas em desenvolvimento de sistemas e sites para empresas em Monte Carmelo MG e Triângulo Mineiro.
           </p>
         </div>
         

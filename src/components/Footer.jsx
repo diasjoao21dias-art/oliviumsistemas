@@ -51,7 +51,7 @@ function Footer() {
             <ul className="footer-contact">
               <li>📧 dom_dias21@hotmail.com</li>
               <li>📱 (34) 99840-8523</li>
-              <li>📍 Patrocínio, MG - Brasil</li>
+              <li>📍 Monte Carmelo, MG - Brasil</li>
               <li>⏰ Seg - Sex: 8h às 18h</li>
             </ul>
           </div>

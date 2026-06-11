@@ -91,7 +91,7 @@ function TermosDeUso() {
           <section className="legal-section">
             <h2>9. Lei Aplicável</h2>
             <p>
-              Estes termos são regidos e interpretados de acordo com as leis brasileiras. Qualquer disputa será resolvida nos tribunais competentes de Patrocínio, Minas Gerais.
+              Estes termos são regidos e interpretados de acordo com as leis brasileiras. Qualquer disputa será resolvida nos tribunais competentes de Monte Carmelo, Minas Gerais.
             </p>
           </section>
 
@@ -103,7 +103,7 @@ function TermosDeUso() {
             <ul>
               <li>Email: dom_dias21@hotmail.com</li>
               <li>Telefone: (34) 99840-8523</li>
-              <li>Endereço: Patrocínio, MG - Brasil</li>
+              <li>Endereço: Monte Carmelo, MG - CEP 38500-000</li>
             </ul>
           </section>
         </div>
