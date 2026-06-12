@@ -162,7 +162,7 @@ npm run preview
 
 ## 📞 Contato
 
-- **Telefone/WhatsApp:** (34) 99840-8523
+- **Telefone/WhatsApp:** (34) 99825-0458
 - **Email:** dom_dias21@hotmail.com
 - **Endereço:** Rua Secundino Farias Tavares, 555, Patrocínio MG
 

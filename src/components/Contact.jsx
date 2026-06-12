@@ -142,7 +142,7 @@ function Contact() {
   }
 
   const sendWhatsApp = () => {
-    const whatsappNumber = '5534998408523'
+    const whatsappNumber = '5534998250458'
     const whatsappMessage = `
 *Novo Contato do Site*
 
@@ -229,7 +229,7 @@ ${formData.message}
                 <div className="contact-icon">📱</div>
                 <div>
                   <h4>Telefone / WhatsApp</h4>
-                  <p><a href="tel:+5534998408523" style={{color:'inherit',textDecoration:'none'}}>(34) 99840-8523</a></p>
+                  <p><a href="tel:+5534998250458" style={{color:'inherit',textDecoration:'none'}}>(34) 99825-0458</a></p>
                 </div>
               </div>
               

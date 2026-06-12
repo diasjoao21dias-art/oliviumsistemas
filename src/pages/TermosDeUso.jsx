@@ -102,7 +102,7 @@ function TermosDeUso() {
             </p>
             <ul>
               <li>Email: dom_dias21@hotmail.com</li>
-              <li>Telefone: (34) 99840-8523</li>
+              <li>Telefone: (34) 99825-0458</li>
               <li>Endereço: Monte Carmelo, MG - CEP 38500-000</li>
             </ul>
           </section>

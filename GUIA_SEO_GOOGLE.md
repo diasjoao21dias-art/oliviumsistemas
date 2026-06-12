@@ -122,7 +122,7 @@ Cadastre sua empresa no Google Maps:
 2. Crie perfil da empresa com:
    - Nome: Olivium Sistemas
    - Endereço: Rua Secundino Farias Tavares, 555, Patrocínio MG
-   - Telefone: (34) 99840-8523
+   - Telefone: (34) 99825-0458
    - Site: https://oliviumsistemas.com.br
    - Categoria: Desenvolvimento de Software / Serviços de TI
    - Horário de funcionamento

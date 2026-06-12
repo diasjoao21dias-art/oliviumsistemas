@@ -162,7 +162,7 @@ function PoliticaPrivacidade() {
             </p>
             <ul>
               <li><strong>Email:</strong> dom_dias21@hotmail.com</li>
-              <li><strong>Telefone:</strong> (34) 99840-8523</li>
+              <li><strong>Telefone:</strong> (34) 99825-0458</li>
               <li><strong>Endereço:</strong> Monte Carmelo, MG - CEP 38500-000</li>
               <li><strong>Horário de Atendimento:</strong> Segunda a Sexta, das 8h às 18h</li>
             </ul>

@@ -50,7 +50,7 @@ function Footer() {
             <h4 className="footer-title">Contato</h4>
             <ul className="footer-contact">
               <li>📧 dom_dias21@hotmail.com</li>
-              <li>📱 (34) 99840-8523</li>
+              <li>📱 (34) 99825-0458</li>
               <li>📍 Monte Carmelo, MG — Atendimento Nacional</li>
               <li>⏰ Seg - Sex: 8h às 18h</li>
             </ul>
