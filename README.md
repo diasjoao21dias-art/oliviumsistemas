@@ -19,7 +19,9 @@ Envie os arquivos extraídos; subir somente o ZIP não publica o site.
 - `styles.css`: layout para computador e celular.
 - `script.js`: menu mobile, navegação por seções e perguntas frequentes.
 - `assets/`: logo, imagens, fontes locais e ícones.
-- `favicon.ico`: ícone da aba do navegador.
+- `favicon-olivium-20260924.ico`: favicon principal com o símbolo da logo atual.
+- `favicon.ico`: cópia de compatibilidade para navegadores que procuram o ícone na raiz.
+- Os ícones PNG e o ícone de atalho do celular em `assets/` também têm nomes novos para evitar cache antigo.
 - `brand/olivium-original.png`: logo original em alta resolução.
 
 ## Publicação
@@ -59,4 +61,8 @@ Acesse `http://localhost:8000` no navegador.
 
 ## Conteúdo do pacote
 
-Pacote completo atualizado em 23/09/2026, com `index.html` diretamente na raiz do ZIP. Todas as imagens e fontes usadas na página estão incluídas. A logo e seu símbolo foram fornecidos pelo proprietário da marca.
+Pacote completo atualizado em 24/09/2026, com `index.html` diretamente na raiz do ZIP. Todas as imagens e fontes usadas na página estão incluídas. A logo e seu símbolo foram fornecidos pelo proprietário da marca.
+
+## Atualização do favicon — 24/09/2026
+
+O favicon utiliza o símbolo da logo oficial da Olivium Tecnologia. Os arquivos receberam novos nomes e todas as referências no HTML foram atualizadas para evitar reutilizar ícones antigos em cache. Envie o pacote completo extraído ao GitHub, incluindo `index.html`, os dois arquivos `.ico` e a pasta `assets/`. Depois da publicação, feche e abra a aba do site para conferir.
